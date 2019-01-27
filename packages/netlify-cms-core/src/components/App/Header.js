@@ -189,6 +189,7 @@ class Header extends React.Component {
                 ))}
               </Dropdown>
             )}
+            WORKS
             <SettingsDropdown
               displayUrl={displayUrl}
               imageUrl={user.get('avatar_url')}
