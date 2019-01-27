@@ -213,6 +213,36 @@ export default class Toolbar extends React.Component {
                   ))}
             </Dropdown>
           </ToolbarDropdownWrapper>
+          <ToolbarDropdownWrapper>
+            <Dropdown
+              dropdownTopOverlap="36px"
+              renderButton={() => (
+                <DropdownButton>
+                  <ToolbarButton
+                    label="Add Component"
+                    icon="add-with"
+                    onClick={this.handleComponentsMenuToggle}
+                    disabled={disabled}
+                  />
+                </DropdownButton>
+              )}
+            >
+              <ToolbarButton
+                type="text-color-primary"
+                label="Primary Color"
+                onClick={onBlockClick}
+                isActive={selectionHasBlock}
+                disabled={disabled}
+              />
+              <ToolbarButton
+                type="text-color-secondary"
+                label="Secondary Color"
+                onClick={onBlockClick}
+                isActive={selectionHasBlock}
+                disabled={disabled}
+              />
+            </Dropdown>
+          </ToolbarDropdownWrapper>
         </div>
         <ToolbarToggle>
           <ToolbarToggleLabel isActive={!rawMode} offPosition>
